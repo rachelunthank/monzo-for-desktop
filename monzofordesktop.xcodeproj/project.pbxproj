@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		744F9C3D218DD16C00CBE4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */; };
+		744F9C3F218DD16C00CBE4A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C3E218DD16C00CBE4A4 /* ViewController.swift */; };
+		744F9C41218DD16F00CBE4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744F9C40218DD16F00CBE4A4 /* Assets.xcassets */; };
+		744F9C44218DD16F00CBE4A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744F9C42218DD16F00CBE4A4 /* Main.storyboard */; };
+		744F9C50218DD16F00CBE4A4 /* monzofordesktopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C4F218DD16F00CBE4A4 /* monzofordesktopTests.swift */; };
+		744F9C5B218DD16F00CBE4A4 /* monzofordesktopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C5A218DD16F00CBE4A4 /* monzofordesktopUITests.swift */; };
+		744F9C69218DD4EB00CBE4A4 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C68218DD4EB00CBE4A4 /* AccountManager.swift */; };
+		744F9C6C218E494800CBE4A4 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C6B218E494800CBE4A4 /* Balance.swift */; };
+		744F9C6E218E5F1800CBE4A4 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C6D218E5F1800CBE4A4 /* Transaction.swift */; };
+		7495D281219A0907006FADD7 /* TransactionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */; };
+		7495D282219A0907006FADD7 /* TransactionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */; };
+		7495D284219B28CD006FADD7 /* Pot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D283219B28CD006FADD7 /* Pot.swift */; };
+		74C33B3721A1B09C00BD33F3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C33B3621A1B09C00BD33F3 /* Account.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		744F9C4C218DD16F00CBE4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 744F9C31218DD16C00CBE4A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 744F9C38218DD16C00CBE4A4;
+			remoteInfo = monzofordesktop;
+		};
+		744F9C57218DD16F00CBE4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 744F9C31218DD16C00CBE4A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 744F9C38218DD16C00CBE4A4;
+			remoteInfo = monzofordesktop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		744F9C39218DD16C00CBE4A4 /* monzofordesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monzofordesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		744F9C3E218DD16C00CBE4A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		744F9C40218DD16F00CBE4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		744F9C43218DD16F00CBE4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		744F9C45218DD16F00CBE4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744F9C46218DD16F00CBE4A4 /* monzofordesktop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = monzofordesktop.entitlements; sourceTree = "<group>"; };
+		744F9C4B218DD16F00CBE4A4 /* monzofordesktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monzofordesktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		744F9C4F218DD16F00CBE4A4 /* monzofordesktopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monzofordesktopTests.swift; sourceTree = "<group>"; };
+		744F9C51218DD16F00CBE4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744F9C56218DD16F00CBE4A4 /* monzofordesktopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monzofordesktopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		744F9C5A218DD16F00CBE4A4 /* monzofordesktopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monzofordesktopUITests.swift; sourceTree = "<group>"; };
+		744F9C5C218DD16F00CBE4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744F9C68218DD4EB00CBE4A4 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		744F9C6B218E494800CBE4A4 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		744F9C6D218E5F1800CBE4A4 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionViewCell.swift; sourceTree = "<group>"; };
+		7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCollectionViewCell.xib; sourceTree = "<group>"; };
+		7495D283219B28CD006FADD7 /* Pot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pot.swift; sourceTree = "<group>"; };
+		74C33B3621A1B09C00BD33F3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		744F9C36218DD16C00CBE4A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744F9C48218DD16F00CBE4A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744F9C53218DD16F00CBE4A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		744F9C30218DD16C00CBE4A4 = {
+			isa = PBXGroup;
+			children = (
+				744F9C3B218DD16C00CBE4A4 /* monzofordesktop */,
+				744F9C4E218DD16F00CBE4A4 /* monzofordesktopTests */,
+				744F9C59218DD16F00CBE4A4 /* monzofordesktopUITests */,
+				744F9C3A218DD16C00CBE4A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		744F9C3A218DD16C00CBE4A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				744F9C39218DD16C00CBE4A4 /* monzofordesktop.app */,
+				744F9C4B218DD16F00CBE4A4 /* monzofordesktopTests.xctest */,
+				744F9C56218DD16F00CBE4A4 /* monzofordesktopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		744F9C3B218DD16C00CBE4A4 /* monzofordesktop */ = {
+			isa = PBXGroup;
+			children = (
+				744F9C6A218E48E000CBE4A4 /* Monzo Objects */,
+				744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */,
+				744F9C3E218DD16C00CBE4A4 /* ViewController.swift */,
+				744F9C40218DD16F00CBE4A4 /* Assets.xcassets */,
+				744F9C42218DD16F00CBE4A4 /* Main.storyboard */,
+				744F9C45218DD16F00CBE4A4 /* Info.plist */,
+				744F9C46218DD16F00CBE4A4 /* monzofordesktop.entitlements */,
+				744F9C68218DD4EB00CBE4A4 /* AccountManager.swift */,
+				7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */,
+				7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */,
+			);
+			path = monzofordesktop;
+			sourceTree = "<group>";
+		};
+		744F9C4E218DD16F00CBE4A4 /* monzofordesktopTests */ = {
+			isa = PBXGroup;
+			children = (
+				744F9C4F218DD16F00CBE4A4 /* monzofordesktopTests.swift */,
+				744F9C51218DD16F00CBE4A4 /* Info.plist */,
+			);
+			path = monzofordesktopTests;
+			sourceTree = "<group>";
+		};
+		744F9C59218DD16F00CBE4A4 /* monzofordesktopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				744F9C5A218DD16F00CBE4A4 /* monzofordesktopUITests.swift */,
+				744F9C5C218DD16F00CBE4A4 /* Info.plist */,
+			);
+			path = monzofordesktopUITests;
+			sourceTree = "<group>";
+		};
+		744F9C6A218E48E000CBE4A4 /* Monzo Objects */ = {
+			isa = PBXGroup;
+			children = (
+				744F9C6B218E494800CBE4A4 /* Balance.swift */,
+				744F9C6D218E5F1800CBE4A4 /* Transaction.swift */,
+				7495D283219B28CD006FADD7 /* Pot.swift */,
+				74C33B3621A1B09C00BD33F3 /* Account.swift */,
+			);
+			path = "Monzo Objects";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		744F9C38218DD16C00CBE4A4 /* monzofordesktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744F9C5F218DD16F00CBE4A4 /* Build configuration list for PBXNativeTarget "monzofordesktop" */;
+			buildPhases = (
+				744F9C35218DD16C00CBE4A4 /* Sources */,
+				744F9C36218DD16C00CBE4A4 /* Frameworks */,
+				744F9C37218DD16C00CBE4A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = monzofordesktop;
+			productName = monzofordesktop;
+			productReference = 744F9C39218DD16C00CBE4A4 /* monzofordesktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		744F9C4A218DD16F00CBE4A4 /* monzofordesktopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744F9C62218DD16F00CBE4A4 /* Build configuration list for PBXNativeTarget "monzofordesktopTests" */;
+			buildPhases = (
+				744F9C47218DD16F00CBE4A4 /* Sources */,
+				744F9C48218DD16F00CBE4A4 /* Frameworks */,
+				744F9C49218DD16F00CBE4A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				744F9C4D218DD16F00CBE4A4 /* PBXTargetDependency */,
+			);
+			name = monzofordesktopTests;
+			productName = monzofordesktopTests;
+			productReference = 744F9C4B218DD16F00CBE4A4 /* monzofordesktopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		744F9C55218DD16F00CBE4A4 /* monzofordesktopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 744F9C65218DD16F00CBE4A4 /* Build configuration list for PBXNativeTarget "monzofordesktopUITests" */;
+			buildPhases = (
+				744F9C52218DD16F00CBE4A4 /* Sources */,
+				744F9C53218DD16F00CBE4A4 /* Frameworks */,
+				744F9C54218DD16F00CBE4A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				744F9C58218DD16F00CBE4A4 /* PBXTargetDependency */,
+			);
+			name = monzofordesktopUITests;
+			productName = monzofordesktopUITests;
+			productReference = 744F9C56218DD16F00CBE4A4 /* monzofordesktopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		744F9C31218DD16C00CBE4A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = rachelunthank;
+				TargetAttributes = {
+					744F9C38218DD16C00CBE4A4 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					744F9C4A218DD16F00CBE4A4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 744F9C38218DD16C00CBE4A4;
+					};
+					744F9C55218DD16F00CBE4A4 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 744F9C38218DD16C00CBE4A4;
+					};
+				};
+			};
+			buildConfigurationList = 744F9C34218DD16C00CBE4A4 /* Build configuration list for PBXProject "monzofordesktop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 744F9C30218DD16C00CBE4A4;
+			productRefGroup = 744F9C3A218DD16C00CBE4A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				744F9C38218DD16C00CBE4A4 /* monzofordesktop */,
+				744F9C4A218DD16F00CBE4A4 /* monzofordesktopTests */,
+				744F9C55218DD16F00CBE4A4 /* monzofordesktopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		744F9C37218DD16C00CBE4A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F9C41218DD16F00CBE4A4 /* Assets.xcassets in Resources */,
+				744F9C44218DD16F00CBE4A4 /* Main.storyboard in Resources */,
+				7495D282219A0907006FADD7 /* TransactionCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744F9C49218DD16F00CBE4A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744F9C54218DD16F00CBE4A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		744F9C35218DD16C00CBE4A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F9C69218DD4EB00CBE4A4 /* AccountManager.swift in Sources */,
+				7495D281219A0907006FADD7 /* TransactionCollectionViewCell.swift in Sources */,
+				744F9C3F218DD16C00CBE4A4 /* ViewController.swift in Sources */,
+				744F9C6C218E494800CBE4A4 /* Balance.swift in Sources */,
+				744F9C3D218DD16C00CBE4A4 /* AppDelegate.swift in Sources */,
+				74C33B3721A1B09C00BD33F3 /* Account.swift in Sources */,
+				7495D284219B28CD006FADD7 /* Pot.swift in Sources */,
+				744F9C6E218E5F1800CBE4A4 /* Transaction.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744F9C47218DD16F00CBE4A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F9C50218DD16F00CBE4A4 /* monzofordesktopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744F9C52218DD16F00CBE4A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F9C5B218DD16F00CBE4A4 /* monzofordesktopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		744F9C4D218DD16F00CBE4A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 744F9C38218DD16C00CBE4A4 /* monzofordesktop */;
+			targetProxy = 744F9C4C218DD16F00CBE4A4 /* PBXContainerItemProxy */;
+		};
+		744F9C58218DD16F00CBE4A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 744F9C38218DD16C00CBE4A4 /* monzofordesktop */;
+			targetProxy = 744F9C57218DD16F00CBE4A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		744F9C42218DD16F00CBE4A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				744F9C43218DD16F00CBE4A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		744F9C5D218DD16F00CBE4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		744F9C5E218DD16F00CBE4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		744F9C60218DD16F00CBE4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = monzofordesktop/monzofordesktop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = monzofordesktop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelunthank.monzofordesktop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		744F9C61218DD16F00CBE4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = monzofordesktop/monzofordesktop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = monzofordesktop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelunthank.monzofordesktop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		744F9C63218DD16F00CBE4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = monzofordesktopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelunthank.monzofordesktopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monzofordesktop.app/Contents/MacOS/monzofordesktop";
+			};
+			name = Debug;
+		};
+		744F9C64218DD16F00CBE4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = monzofordesktopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelunthank.monzofordesktopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monzofordesktop.app/Contents/MacOS/monzofordesktop";
+			};
+			name = Release;
+		};
+		744F9C66218DD16F00CBE4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = monzofordesktopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelunthank.monzofordesktopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = monzofordesktop;
+			};
+			name = Debug;
+		};
+		744F9C67218DD16F00CBE4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = monzofordesktopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelunthank.monzofordesktopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = monzofordesktop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		744F9C34218DD16C00CBE4A4 /* Build configuration list for PBXProject "monzofordesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744F9C5D218DD16F00CBE4A4 /* Debug */,
+				744F9C5E218DD16F00CBE4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744F9C5F218DD16F00CBE4A4 /* Build configuration list for PBXNativeTarget "monzofordesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744F9C60218DD16F00CBE4A4 /* Debug */,
+				744F9C61218DD16F00CBE4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744F9C62218DD16F00CBE4A4 /* Build configuration list for PBXNativeTarget "monzofordesktopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744F9C63218DD16F00CBE4A4 /* Debug */,
+				744F9C64218DD16F00CBE4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		744F9C65218DD16F00CBE4A4 /* Build configuration list for PBXNativeTarget "monzofordesktopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				744F9C66218DD16F00CBE4A4 /* Debug */,
+				744F9C67218DD16F00CBE4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 744F9C31218DD16C00CBE4A4 /* Project object */;
+}
