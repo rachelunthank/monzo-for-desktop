@@ -261,6 +261,8 @@ extension RootViewController {
             if let potName = getPotName(from: potId) {
                 label.stringValue = "\(potName) Pot"
             }
+        } else if let description = transaction?.description {
+            label.stringValue = description
         }
     }
 
