@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742A744C21F54573005F90FF /* Formatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A744B21F54573005F90FF /* Formatter+Extensions.swift */; };
 		744F9C3D218DD16C00CBE4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */; };
-		744F9C3F218DD16C00CBE4A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C3E218DD16C00CBE4A4 /* ViewController.swift */; };
+		744F9C3F218DD16C00CBE4A4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C3E218DD16C00CBE4A4 /* RootViewController.swift */; };
 		744F9C41218DD16F00CBE4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744F9C40218DD16F00CBE4A4 /* Assets.xcassets */; };
 		744F9C44218DD16F00CBE4A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744F9C42218DD16F00CBE4A4 /* Main.storyboard */; };
 		744F9C50218DD16F00CBE4A4 /* monzofordesktopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C4F218DD16F00CBE4A4 /* monzofordesktopTests.swift */; };
@@ -40,9 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		742A744B21F54573005F90FF /* Formatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extensions.swift"; sourceTree = "<group>"; };
 		744F9C39218DD16C00CBE4A4 /* monzofordesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monzofordesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		744F9C3E218DD16C00CBE4A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		744F9C3E218DD16C00CBE4A4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		744F9C40218DD16F00CBE4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		744F9C43218DD16F00CBE4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		744F9C45218DD16F00CBE4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		742A744A21F5452E005F90FF /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				744F9C40218DD16F00CBE4A4 /* Assets.xcassets */,
+				744F9C45218DD16F00CBE4A4 /* Info.plist */,
+				744F9C46218DD16F00CBE4A4 /* monzofordesktop.entitlements */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		744F9C30218DD16C00CBE4A4 = {
 			isa = PBXGroup;
 			children = (
@@ -110,16 +122,15 @@
 		744F9C3B218DD16C00CBE4A4 /* monzofordesktop */ = {
 			isa = PBXGroup;
 			children = (
+				742A744A21F5452E005F90FF /* Supporting */,
 				744F9C6A218E48E000CBE4A4 /* Monzo Objects */,
 				744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */,
-				744F9C3E218DD16C00CBE4A4 /* ViewController.swift */,
-				744F9C40218DD16F00CBE4A4 /* Assets.xcassets */,
+				744F9C3E218DD16C00CBE4A4 /* RootViewController.swift */,
 				744F9C42218DD16F00CBE4A4 /* Main.storyboard */,
-				744F9C45218DD16F00CBE4A4 /* Info.plist */,
-				744F9C46218DD16F00CBE4A4 /* monzofordesktop.entitlements */,
 				744F9C68218DD4EB00CBE4A4 /* AccountManager.swift */,
 				7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */,
 				7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */,
+				742A744B21F54573005F90FF /* Formatter+Extensions.swift */,
 			);
 			path = monzofordesktop;
 			sourceTree = "<group>";
@@ -291,7 +302,8 @@
 			files = (
 				744F9C69218DD4EB00CBE4A4 /* AccountManager.swift in Sources */,
 				7495D281219A0907006FADD7 /* TransactionCollectionViewCell.swift in Sources */,
-				744F9C3F218DD16C00CBE4A4 /* ViewController.swift in Sources */,
+				742A744C21F54573005F90FF /* Formatter+Extensions.swift in Sources */,
+				744F9C3F218DD16C00CBE4A4 /* RootViewController.swift in Sources */,
 				744F9C6C218E494800CBE4A4 /* Balance.swift in Sources */,
 				744F9C3D218DD16C00CBE4A4 /* AppDelegate.swift in Sources */,
 				74C33B3721A1B09C00BD33F3 /* Account.swift in Sources */,

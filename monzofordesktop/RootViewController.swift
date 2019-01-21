@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  monzofordesktop
 //
 //  Created by Rachel Unthank on 03/11/2018.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class RootViewController: NSViewController {
 
     var accountController: AccountManager
     var accountTransactions: [Transaction]?
@@ -155,7 +155,7 @@ class ViewController: NSViewController {
     }
 }
 
-extension ViewController: NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
+extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
         return accountTransactions?.count ?? 0
@@ -204,7 +204,7 @@ extension ViewController: NSCollectionViewDataSource, NSCollectionViewDelegate, 
     }
 }
 
-extension ViewController {
+extension RootViewController {
 
     func resetTransactionViewLabels() {
         transactionLogoImageView.image = nil
