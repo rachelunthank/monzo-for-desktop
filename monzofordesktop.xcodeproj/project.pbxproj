@@ -477,7 +477,7 @@
 				CODE_SIGN_ENTITLEMENTS = monzofordesktop/monzofordesktop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = monzofordesktop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/monzofordesktop/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -495,7 +495,7 @@
 				CODE_SIGN_ENTITLEMENTS = monzofordesktop/monzofordesktop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = monzofordesktop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/monzofordesktop/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

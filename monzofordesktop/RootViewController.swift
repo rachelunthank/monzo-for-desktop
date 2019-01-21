@@ -17,8 +17,16 @@ class RootViewController: NSViewController {
 
     let cellId = NSUserInterfaceItemIdentifier(rawValue: "TransactionCollectionViewCell")
 
-    @IBOutlet var spentTodayLabel: NSTextField!
-    @IBOutlet var balanceLabel: NSTextField!
+    @IBOutlet var spentTodayLabel: NSTextField! {
+        didSet {
+            spentTodayLabel.font = NSFont.systemFont(ofSize: 20)
+        }
+    }
+    @IBOutlet var balanceLabel: NSTextField! {
+        didSet {
+            balanceLabel.font = NSFont.systemFont(ofSize: 20)
+        }
+    }
     @IBOutlet var refreshButton: NSButton!
 
     @IBOutlet var transactionsCollectionView: NSCollectionView!

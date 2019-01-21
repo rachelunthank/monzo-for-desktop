@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,8 +31,8 @@
                     <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S43-HC-Vkn">
-                    <rect key="frame" x="66" y="25" width="66" height="17"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" alignment="center" title="Merchant" id="EUq-m4-NtD">
+                    <rect key="frame" x="66" y="25" width="62" height="17"/>
+                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" enabled="NO" alignment="left" placeholderString="Merchant" id="EUq-m4-NtD">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -43,7 +43,7 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="GKP-SI-gHS"/>
                     </constraints>
-                    <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" title="£0.00" id="Hxz-Nh-sFt">
+                    <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" placeholderString="£0.00" id="Hxz-Nh-sFt">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -52,6 +52,7 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="NXL-aT-yrJ" secondAttribute="trailing" constant="8" id="2xi-a7-qkd"/>
+                <constraint firstItem="NXL-aT-yrJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S43-HC-Vkn" secondAttribute="trailing" constant="8" id="6zX-Lp-EDR"/>
                 <constraint firstItem="S43-HC-Vkn" firstAttribute="centerY" secondItem="iaW-Qa-YuB" secondAttribute="centerY" id="9mq-PN-9K9"/>
                 <constraint firstItem="iaW-Qa-YuB" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="Acq-mb-Qef"/>
                 <constraint firstItem="iaW-Qa-YuB" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="D3r-xI-37F"/>
