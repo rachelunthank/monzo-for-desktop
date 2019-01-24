@@ -11,12 +11,14 @@ import Cocoa
 class RootViewController: NSViewController {
 
     var accountController: AccountManager
+
+    var accounts = [Account]()
     var accountTransactions: [Transaction]?
     var accountPots: [Pot]?
-    var accounts = [Account]()
 
     let cellId = NSUserInterfaceItemIdentifier(rawValue: "TransactionCollectionViewCell")
 
+    // MARK: - Top Row View Outlets
     @IBOutlet var spentTodayLabel: NSTextField! {
         didSet {
             spentTodayLabel.font = NSFont.systemFont(ofSize: 20)
@@ -27,11 +29,6 @@ class RootViewController: NSViewController {
             balanceLabel.font = NSFont.systemFont(ofSize: 20)
         }
     }
-    @IBOutlet var refreshButton: NSButton!
-
-    @IBOutlet var transactionsCollectionView: NSCollectionView!
-    @IBOutlet var transactionsCollectionViewFlowLayout: NSCollectionViewFlowLayout!
-
     @IBOutlet var accountSelector: NSPopUpButton! {
         didSet {
             accountSelector.removeAllItems()
@@ -40,7 +37,12 @@ class RootViewController: NSViewController {
 
         }
     }
+    @IBOutlet var refreshButton: NSButton!
 
+    @IBOutlet var transactionsCollectionView: NSCollectionView!
+    @IBOutlet var transactionsCollectionViewFlowLayout: NSCollectionViewFlowLayout!
+
+    // MARK: - Transaction View Outlets
     @IBOutlet var transactionView: NSView! {
         didSet {
             transactionView.isHidden = true
@@ -65,6 +67,7 @@ class RootViewController: NSViewController {
     @IBOutlet var transactionCategoryLabel: NSTextField!
     @IBOutlet var transactionDateLabel: NSTextField!
 
+    // MARK: - Empy Transaction View Outlets
     @IBOutlet var emptyTransactionView: NSView! {
         didSet {
             emptyTransactionView.isHidden = false
@@ -103,6 +106,10 @@ class RootViewController: NSViewController {
         super.viewDidAppear()
         self.view.window?.title = "Monzo For Mac"
     }
+}
+
+// MARK: - Account Related Functions
+extension RootViewController {
 
     private func setBalanceInfo() {
 
@@ -133,6 +140,14 @@ class RootViewController: NSViewController {
         }
     }
 
+    func getPotName(from potId: String?) -> String? {
+        guard let pots = accountPots else { return nil }
+        for pot in pots {
+            if pot.id == potId { return pot.name }
+        }
+        return nil
+    }
+
     private func getAccountsInfo() {
 
         self.accounts.removeAll()
@@ -156,13 +171,17 @@ class RootViewController: NSViewController {
         setTransactionsInfo()
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+    @objc func changeAccount() {
+        let index = accountSelector.indexOfSelectedItem
+        let selectedAccount = accounts[index]
+        AccountInfo.updateAccountId(with: selectedAccount.id)
+        DispatchQueue.main.async {
+            self.onRefresh(self)
         }
     }
 }
 
+// MARK: - Collection View Delegate Functions
 extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -197,6 +216,10 @@ extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelega
         guard let transaction = accountTransactions?[index] else { return }
         loadTransactionView(with: transaction)
     }
+}
+
+// MARK: - View Updating Functions
+extension RootViewController {
 
     func loadTransactionView(with transaction: Transaction) {
         resetTransactionViewLabels()
@@ -210,9 +233,6 @@ extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelega
         emptyTransactionView.isHidden = true
         transactionView.isHidden = false
     }
-}
-
-extension RootViewController {
 
     func resetTransactionViewLabels() {
         transactionLogoImageView.image = nil
@@ -290,14 +310,10 @@ extension RootViewController {
             }
         }
     }
+}
 
-    func getPotName(from potId: String?) -> String? {
-        guard let pots = accountPots else { return nil }
-        for pot in pots {
-            if pot.id == potId { return pot.name }
-        }
-        return nil
-    }
+// MARK: - Currency Related Functions
+extension RootViewController {
 
     private func formatCurrencyString(from balance: Int) -> String? {
         let currencyFormatter = NumberFormatter()
@@ -314,14 +330,5 @@ extension RootViewController {
         guard let balance = balance else { return false }
         if balance > 0 { return false }
         return true
-    }
-
-    @objc func changeAccount() {
-        let index = accountSelector.indexOfSelectedItem
-        let selectedAccount = accounts[index]
-        accountController.accountId = selectedAccount.id
-        DispatchQueue.main.async {
-            self.onRefresh(self)
-        }
     }
 }

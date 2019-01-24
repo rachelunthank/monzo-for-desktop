@@ -20,6 +20,7 @@
 		7495D281219A0907006FADD7 /* TransactionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */; };
 		7495D282219A0907006FADD7 /* TransactionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */; };
 		7495D284219B28CD006FADD7 /* Pot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7495D283219B28CD006FADD7 /* Pot.swift */; };
+		74B0E13321FA791F006B321F /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0E13221FA791F006B321F /* AccountInfo.swift */; };
 		74C33B3721A1B09C00BD33F3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C33B3621A1B09C00BD33F3 /* Account.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCollectionViewCell.xib; sourceTree = "<group>"; };
 		7495D283219B28CD006FADD7 /* Pot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pot.swift; sourceTree = "<group>"; };
+		74B0E13221FA791F006B321F /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		74C33B3621A1B09C00BD33F3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */,
 				744F9C3E218DD16C00CBE4A4 /* RootViewController.swift */,
 				744F9C68218DD4EB00CBE4A4 /* AccountManager.swift */,
+				74B0E13221FA791F006B321F /* AccountInfo.swift */,
 			);
 			path = monzofordesktop;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				744F9C6C218E494800CBE4A4 /* Balance.swift in Sources */,
 				744F9C3D218DD16C00CBE4A4 /* AppDelegate.swift in Sources */,
 				74C33B3721A1B09C00BD33F3 /* Account.swift in Sources */,
+				74B0E13321FA791F006B321F /* AccountInfo.swift in Sources */,
 				7495D284219B28CD006FADD7 /* Pot.swift in Sources */,
 				744F9C6E218E5F1800CBE4A4 /* Transaction.swift in Sources */,
 			);

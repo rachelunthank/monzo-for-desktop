@@ -10,9 +10,13 @@ import Foundation
 
 public class AccountManager {
 
-    private let accessToken = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYiI6IlNEZ21LcFVKVVQ1OE5uOXFtbndUIiwianRpIjoiYWNjdG9rXzAwMDA5ZW40WWxCNmdzd085T1FlaWYiLCJ0eXAiOiJhdCIsInYiOiI1In0.T8i9OKA2is5z0p_ygRT2k0qoK_fXIQzfrxrX_29lMK2ywGznn6ZJvJlkU_FheOXlYhQPQLacA-6_G2fX0siW_Q"
+    private var accessToken: String {
+        return AccountInfo.accessToken
+    }
 
-    public var accountId = "acc_00009QaQi8HDCkEhybebL7"
+    public var accountId: String {
+        return AccountInfo.accountId
+    }
 
     private let apiUrlString = "https://api.monzo.com/"
 
