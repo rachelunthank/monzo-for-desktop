@@ -124,13 +124,11 @@
 			children = (
 				742A744A21F5452E005F90FF /* Supporting */,
 				744F9C6A218E48E000CBE4A4 /* Monzo Objects */,
+				74B0E13021FA75F2006B321F /* Views */,
+				74B0E13121FA7610006B321F /* Extensions */,
 				744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */,
 				744F9C3E218DD16C00CBE4A4 /* RootViewController.swift */,
-				744F9C42218DD16F00CBE4A4 /* Main.storyboard */,
 				744F9C68218DD4EB00CBE4A4 /* AccountManager.swift */,
-				7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */,
-				7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */,
-				742A744B21F54573005F90FF /* Formatter+Extensions.swift */,
 			);
 			path = monzofordesktop;
 			sourceTree = "<group>";
@@ -162,6 +160,24 @@
 				74C33B3621A1B09C00BD33F3 /* Account.swift */,
 			);
 			path = "Monzo Objects";
+			sourceTree = "<group>";
+		};
+		74B0E13021FA75F2006B321F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				744F9C42218DD16F00CBE4A4 /* Main.storyboard */,
+				7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */,
+				7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74B0E13121FA7610006B321F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				742A744B21F54573005F90FF /* Formatter+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
