@@ -19,6 +19,14 @@ class RootViewController: NSViewController {
     let cellId = NSUserInterfaceItemIdentifier(rawValue: "TransactionCollectionViewCell")
 
     // MARK: - Top Row View Outlets
+    @IBOutlet var menuBar: NSView! {
+        didSet {
+            menuBar.wantsLayer = true
+            menuBar.layer?.backgroundColor = CGColor(red: 20/255, green: 25/255, blue: 60/255, alpha: 1)
+        }
+    }
+
+
     @IBOutlet var spentTodayLabel: NSTextField! {
         didSet {
             spentTodayLabel.font = NSFont.systemFont(ofSize: 20)
@@ -104,7 +112,9 @@ class RootViewController: NSViewController {
 
     override func viewDidAppear() {
         super.viewDidAppear()
-        self.view.window?.title = "Monzo For Mac"
+        self.view.window?.titleVisibility = .hidden
+        self.view.window?.titlebarAppearsTransparent = true
+        self.view.window?.styleMask.insert(.fullSizeContentView)
     }
 }
 
