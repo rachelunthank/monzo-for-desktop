@@ -13,7 +13,10 @@ class RootViewController: NSViewController {
     var accountController: AccountManager
 
     var accounts = [Account]()
-    var accountTransactions: [Transaction]?
+
+    var groupedAccountTransactions: [String: [Transaction]]?
+    var transactionDatesList: [String]?
+
     var accountPots: [Pot]?
 
     let cellId = NSUserInterfaceItemIdentifier(rawValue: "TransactionCollectionViewCell")
@@ -137,11 +140,43 @@ extension RootViewController {
 
     private func setTransactionsInfo() {
         accountController.getTransactions { (transactions) in
-            self.accountTransactions = transactions.transactions.reversed()
+
+            self.groupTransactionsByDate(transactions.transactions.reversed())
+
             DispatchQueue.main.async {
                 self.transactionsCollectionView.reloadData()
             }
         }
+    }
+
+    func groupTransactionsByDate(_ transactions: [Transaction]) {
+
+        var groupedTransactions = [String: [Transaction]]()
+
+        var currentGroupingDate = getDateString(from: transactions.first?.created) ?? ""
+        var dateList = [String]()
+
+        var currentGroupedTransactions = [Transaction]()
+
+        for transaction in transactions {
+
+            let transactionDate = getDateString(from: transaction.created) ?? ""
+
+            if transactionDate == currentGroupingDate {
+                currentGroupedTransactions.append(transaction)
+            } else {
+                dateList.append(transactionDate)
+                groupedTransactions[currentGroupingDate] = currentGroupedTransactions
+
+                currentGroupingDate = transactionDate
+                currentGroupedTransactions.removeAll()
+
+                currentGroupedTransactions.append(transaction)
+            }
+        }
+
+        self.groupedAccountTransactions = groupedTransactions
+        self.transactionDatesList = dateList
     }
 
     private func getPotsInfo() {
@@ -194,8 +229,18 @@ extension RootViewController {
 // MARK: - Collection View Delegate Functions
 extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout {
 
+    func numberOfSections(in collectionView: NSCollectionView) -> Int {
+        return transactionDatesList?.count ?? 0
+    }
+
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return accountTransactions?.count ?? 0
+
+        guard let sectionDate = transactionDatesList?[section],
+            let transactionsForDate = groupedAccountTransactions?[sectionDate] else {
+                return 0
+        }
+
+        return transactionsForDate.count
     }
 
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
@@ -206,7 +251,14 @@ extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelega
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
 
         let item = collectionView.makeItem(withIdentifier: cellId, for: indexPath)
-        let transaction = accountTransactions?[indexPath.item]
+
+        guard let transactionDate = transactionDatesList?[indexPath.section],
+            let transactionsForDate = groupedAccountTransactions?[transactionDate] else {
+                return item
+        }
+
+        let transaction = transactionsForDate[indexPath.item]
+
         guard let collectionViewItem = item as? TransactionCollectionViewCell else { return item }
 
         loadTransactionImage(transaction, for: collectionViewItem.merchantImageView)
@@ -222,8 +274,14 @@ extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelega
 
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
 
-        guard let index = indexPaths.first?.item else { return }
-        guard let transaction = accountTransactions?[index] else { return }
+        guard let index = indexPaths.first else { return }
+
+        guard let transactionDate = transactionDatesList?[index.section],
+            let transactionsForDate = groupedAccountTransactions?[transactionDate] else {
+                return
+        }
+
+        let transaction = transactionsForDate[index.item]
         loadTransactionView(with: transaction)
     }
 }
@@ -257,12 +315,7 @@ extension RootViewController {
 
     func loadTransactionDate(_ transaction: Transaction?, for label: NSTextField) {
         guard let transactionDate = transaction?.created else { return }
-        let formatter = Formatter.iso8601
-        guard let date = formatter.date(from: transactionDate) else { return }
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE MMM d, yyyy"
-        label.stringValue = dateFormatter.string(from: date)
+        label.stringValue = getDateString(from: transactionDate) ?? ""
     }
 
     func loadTransactionAddress(_ transaction: Transaction?, for label: NSTextField) {
@@ -340,5 +393,16 @@ extension RootViewController {
         guard let balance = balance else { return false }
         if balance > 0 { return false }
         return true
+    }
+
+    func getDateString(from isoString: String?) -> String? {
+
+        guard let isoString = isoString else { return nil }
+        let formatter = Formatter.iso8601
+        guard let date = formatter.date(from: isoString) else { return nil }
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE MMM d, yyyy"
+        return dateFormatter.string(from: date)
     }
 }
