@@ -20,6 +20,7 @@ class RootViewController: NSViewController {
     var accountPots: [Pot]?
 
     let cellId = NSUserInterfaceItemIdentifier(rawValue: "TransactionCollectionViewCell")
+    let headerId = NSUserInterfaceItemIdentifier(rawValue: "CollectionViewHeaderView")
 
     // MARK: - Top Row View Outlets
     @IBOutlet var menuBar: NSView! {
@@ -233,6 +234,19 @@ extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelega
         return transactionDatesList?.count ?? 0
     }
 
+    func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: NSCollectionView.SupplementaryElementKind, at indexPath: IndexPath) -> NSView {
+
+        let view = collectionView.makeSupplementaryView(ofKind: NSCollectionView.elementKindSectionHeader, withIdentifier: headerId, for: indexPath)
+
+        guard let headerView = view as? CollectionViewHeaderView else { return view }
+
+        let transactionDate = transactionDatesList?[indexPath.section]
+
+        headerView.headerLabel.stringValue = transactionDate ?? ""
+
+        return headerView
+    }
+
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
 
         guard let sectionDate = transactionDatesList?[section],
@@ -246,6 +260,11 @@ extension RootViewController: NSCollectionViewDataSource, NSCollectionViewDelega
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
 
         return NSSize(width: collectionView.frame.width, height: 100)
+    }
+
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> NSSize {
+
+        return NSSize(width: collectionView.frame.width, height: 50)
     }
 
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {

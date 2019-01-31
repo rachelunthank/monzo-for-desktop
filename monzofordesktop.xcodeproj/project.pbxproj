@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		742A744C21F54573005F90FF /* Formatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A744B21F54573005F90FF /* Formatter+Extensions.swift */; };
+		7445509722038F9D004B8594 /* CollectionViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7445509622038F9D004B8594 /* CollectionViewHeaderView.swift */; };
+		7445509922038FC0004B8594 /* CollectionViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7445509822038FC0004B8594 /* CollectionViewHeaderView.xib */; };
 		744F9C3D218DD16C00CBE4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */; };
 		744F9C3F218DD16C00CBE4A4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F9C3E218DD16C00CBE4A4 /* RootViewController.swift */; };
 		744F9C41218DD16F00CBE4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744F9C40218DD16F00CBE4A4 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		742A744B21F54573005F90FF /* Formatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extensions.swift"; sourceTree = "<group>"; };
+		7445509622038F9D004B8594 /* CollectionViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderView.swift; sourceTree = "<group>"; };
+		7445509822038FC0004B8594 /* CollectionViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeaderView.xib; sourceTree = "<group>"; };
 		744F9C39218DD16C00CBE4A4 /* monzofordesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monzofordesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		744F9C3C218DD16C00CBE4A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		744F9C3E218DD16C00CBE4A4 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 				744F9C42218DD16F00CBE4A4 /* Main.storyboard */,
 				7495D27F219A0907006FADD7 /* TransactionCollectionViewCell.swift */,
 				7495D280219A0907006FADD7 /* TransactionCollectionViewCell.xib */,
+				7445509622038F9D004B8594 /* CollectionViewHeaderView.swift */,
+				7445509822038FC0004B8594 /* CollectionViewHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7445509922038FC0004B8594 /* CollectionViewHeaderView.xib in Resources */,
 				744F9C41218DD16F00CBE4A4 /* Assets.xcassets in Resources */,
 				744F9C44218DD16F00CBE4A4 /* Main.storyboard in Resources */,
 				7495D282219A0907006FADD7 /* TransactionCollectionViewCell.xib in Resources */,
@@ -328,6 +335,7 @@
 				74C33B3721A1B09C00BD33F3 /* Account.swift in Sources */,
 				74B0E13321FA791F006B321F /* AccountInfo.swift in Sources */,
 				7495D284219B28CD006FADD7 /* Pot.swift in Sources */,
+				7445509722038F9D004B8594 /* CollectionViewHeaderView.swift in Sources */,
 				744F9C6E218E5F1800CBE4A4 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
