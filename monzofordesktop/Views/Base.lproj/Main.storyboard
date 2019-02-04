@@ -713,36 +713,91 @@
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="386"/>
                                 <subviews>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jmP-gB-8LV">
-                                        <rect key="frame" x="62" y="17" width="77" height="25"/>
-                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="wQl-h1-pLy" id="AAj-6q-vX1">
+                                        <rect key="frame" x="8" y="7" width="185" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rmP-xT-46n"/>
+                                        </constraints>
+                                        <popUpButtonCell key="cell" type="push" title="Selected Account" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" arrowPosition="noArrow" preferredEdge="maxY" selectedItem="wQl-h1-pLy" id="AAj-6q-vX1">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="iim-Vc-6Gp">
                                                 <items>
-                                                    <menuItem title="Item 1" state="on" id="wQl-h1-pLy"/>
-                                                    <menuItem title="Item 2" id="MeR-6I-ldN"/>
-                                                    <menuItem title="Item 3" id="6IW-1N-GK2"/>
+                                                    <menuItem title="Selected Account" state="on" id="wQl-h1-pLy"/>
+                                                    <menuItem title="Alternate Account" id="MeR-6I-ldN"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
                                     </popUpButton>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cQl-hq-HTw">
-                                        <rect key="frame" x="169" y="353" width="21" height="23"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0dI-pl-sdC">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                        <rect key="frame" x="174" y="351" width="16" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="St9-WB-sdc"/>
+                                            <constraint firstAttribute="width" constant="16" id="YEY-wI-9OY"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="NSRefreshTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="0dI-pl-sdC">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="systemBold" size="12"/>
+                                            <string key="keyEquivalent">r</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="onRefresh:" target="XfG-lQ-9wD" id="MO3-uO-BVz"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VnT-RR-fOw">
+                                        <rect key="frame" x="93" y="272" width="97" height="19"/>
+                                        <buttonCell key="cell" type="bevel" title="Transactions" bezelStyle="rounded" alignment="center" state="on" userInterfaceLayoutDirection="rightToLeft" imageScaling="proportionallyDown" inset="2" id="ymp-7W-fbw">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="16"/>
+                                        </buttonCell>
+                                        <color key="contentTintColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YLd-y2-GAW">
+                                        <rect key="frame" x="155" y="238" width="35" height="19"/>
+                                        <buttonCell key="cell" type="bevel" title="Pots" bezelStyle="rounded" alignment="center" enabled="NO" userInterfaceLayoutDirection="rightToLeft" imageScaling="proportionallyDown" inset="2" id="sXE-iG-eFA">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="15"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tPt-zo-0sx">
+                                        <rect key="frame" x="78" y="170" width="112" height="19"/>
+                                        <buttonCell key="cell" type="bevel" title="Account Details" bezelStyle="rounded" alignment="center" enabled="NO" userInterfaceLayoutDirection="rightToLeft" imageScaling="proportionallyDown" inset="2" id="91b-zy-Ks4">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="15"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-Su-F41">
+                                        <rect key="frame" x="130" y="136" width="60" height="19"/>
+                                        <buttonCell key="cell" type="bevel" title="Support" bezelStyle="rounded" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="84x-pm-04e">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="15"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ary-Ix-WnM">
+                                        <rect key="frame" x="121" y="204" width="69" height="19"/>
+                                        <buttonCell key="cell" type="bevel" title="Summary" bezelStyle="rounded" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="LWm-1H-mFI">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="15"/>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="jmP-gB-8LV" firstAttribute="leading" secondItem="43k-hS-WRH" secondAttribute="leading" constant="10" id="2wz-C7-DPf"/>
+                                    <constraint firstItem="YLd-y2-GAW" firstAttribute="top" secondItem="VnT-RR-fOw" secondAttribute="bottom" constant="15" id="7ex-zk-WEX"/>
+                                    <constraint firstAttribute="trailing" secondItem="VnT-RR-fOw" secondAttribute="trailing" constant="10" id="BDn-L5-xTO"/>
+                                    <constraint firstItem="VnT-RR-fOw" firstAttribute="top" secondItem="cQl-hq-HTw" secondAttribute="bottom" constant="60" id="Bap-ao-9v3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ary-Ix-WnM" secondAttribute="trailing" constant="10" id="D1p-oi-vQL"/>
+                                    <constraint firstItem="tPt-zo-0sx" firstAttribute="top" secondItem="Ary-Ix-WnM" secondAttribute="bottom" constant="15" id="HNx-0N-mKS"/>
                                     <constraint firstAttribute="width" constant="200" id="Jwt-p6-Ks0"/>
+                                    <constraint firstAttribute="trailing" secondItem="tPt-zo-0sx" secondAttribute="trailing" constant="10" id="RQd-cA-7Z4"/>
                                     <constraint firstAttribute="trailing" secondItem="cQl-hq-HTw" secondAttribute="trailing" constant="10" id="Xya-XQ-P7H"/>
-                                    <constraint firstItem="jmP-gB-8LV" firstAttribute="centerX" secondItem="43k-hS-WRH" secondAttribute="centerX" id="aNW-bC-Adm"/>
-                                    <constraint firstAttribute="bottom" secondItem="jmP-gB-8LV" secondAttribute="bottom" constant="20" id="hDx-NS-N7L"/>
+                                    <constraint firstAttribute="bottom" secondItem="jmP-gB-8LV" secondAttribute="bottom" constant="10" id="bXs-AV-xa8"/>
+                                    <constraint firstAttribute="trailing" secondItem="YLd-y2-GAW" secondAttribute="trailing" constant="10" id="ivs-U2-Ut6"/>
+                                    <constraint firstAttribute="trailing" secondItem="IfS-Su-F41" secondAttribute="trailing" constant="10" id="oCl-8h-txZ"/>
                                     <constraint firstItem="cQl-hq-HTw" firstAttribute="top" secondItem="43k-hS-WRH" secondAttribute="top" constant="10" id="pla-72-ITa"/>
+                                    <constraint firstItem="IfS-Su-F41" firstAttribute="top" secondItem="tPt-zo-0sx" secondAttribute="bottom" constant="15" id="qS4-fq-5gb"/>
+                                    <constraint firstAttribute="trailing" secondItem="jmP-gB-8LV" secondAttribute="trailing" constant="10" id="sTU-7H-e0F"/>
+                                    <constraint firstItem="Ary-Ix-WnM" firstAttribute="top" secondItem="YLd-y2-GAW" secondAttribute="bottom" constant="15" id="u57-c3-pPo"/>
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-dM-8Ne" userLabel="Account Status View">
