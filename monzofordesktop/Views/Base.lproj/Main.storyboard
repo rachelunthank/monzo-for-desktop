@@ -706,7 +706,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="RootViewController" customModule="monzofordesktop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1028" height="386"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1043" height="386"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="43k-hS-WRH" userLabel="Menu View">
@@ -885,10 +885,10 @@
                                 </scroller>
                             </scrollView>
                             <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qk9-xR-afa">
-                                <rect key="frame" x="616" y="15" width="404" height="351"/>
+                                <rect key="frame" x="616" y="15" width="419" height="351"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dXW-cW-g0G">
-                                        <rect key="frame" x="172" y="261" width="60" height="60"/>
+                                        <rect key="frame" x="180" y="261" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="7Mg-U8-l11"/>
                                             <constraint firstAttribute="width" constant="60" id="GFh-VD-d5Q"/>
@@ -896,7 +896,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Izs-Zc-utb"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JWv-QY-yu4">
-                                        <rect key="frame" x="171" y="236" width="62" height="17"/>
+                                        <rect key="frame" x="179" y="236" width="62" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Merchant" id="NeJ-f2-Zeu">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -904,7 +904,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="04f-jY-JYG">
-                                        <rect key="frame" x="182" y="211" width="40" height="17"/>
+                                        <rect key="frame" x="190" y="211" width="40" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="£0.00" id="odL-F1-WtW">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -912,7 +912,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xAC-sl-WSc">
-                                        <rect key="frame" x="184" y="186" width="37" height="17"/>
+                                        <rect key="frame" x="191" y="186" width="37" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="1Tw-ie-wIt">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -920,7 +920,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="SW7-TL-mRq">
-                                        <rect key="frame" x="156" y="161" width="92" height="17"/>
+                                        <rect key="frame" x="164" y="161" width="92" height="17"/>
                                         <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="X8K-Kb-f7N">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -928,7 +928,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-na-V78">
-                                        <rect key="frame" x="184" y="136" width="37" height="17"/>
+                                        <rect key="frame" x="191" y="136" width="37" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="s3c-Vq-XF1">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -936,7 +936,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A2A-4p-19X">
-                                        <rect key="frame" x="184" y="111" width="37" height="17"/>
+                                        <rect key="frame" x="191" y="111" width="37" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="3qN-sO-Pji">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -963,10 +963,10 @@
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="lNW-Dr-7Gz" userLabel="Empty Transaction View">
-                                <rect key="frame" x="616" y="15" width="404" height="351"/>
+                                <rect key="frame" x="616" y="15" width="419" height="351"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c33-yZ-cJm">
-                                        <rect key="frame" x="127" y="126" width="150" height="200"/>
+                                        <rect key="frame" x="135" y="126" width="150" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="iOF-eM-kb0"/>
                                             <constraint firstAttribute="height" constant="200" id="qYb-E0-kfa"/>
@@ -974,9 +974,11 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hotChipImage" id="QQT-dM-x3J"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gZA-uv-7na">
-                                        <rect key="frame" x="18" y="89" width="368" height="17"/>
-                                        <textFieldCell key="cell" alignment="center" title="Tap on a transaction to view more detailed information here" id="Jww-f8-Mvo">
+                                        <rect key="frame" x="18" y="72" width="383" height="34"/>
+                                        <textFieldCell key="cell" alignment="center" id="Jww-f8-Mvo">
                                             <font key="font" metaFont="system"/>
+                                            <string key="title">Tap on a transaction to view more 
+detailed information here</string>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
