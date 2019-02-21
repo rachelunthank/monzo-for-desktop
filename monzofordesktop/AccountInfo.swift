@@ -10,11 +10,7 @@ import Foundation
 
 class AccountInfo {
 
-    public static let accessToken = ""
+    public var accessToken = ""
 
-    public static var accountId = ""
-
-    public static func updateAccountId(with id: String) {
-        accountId = id
-    }
+    public var accountId = ""
 }

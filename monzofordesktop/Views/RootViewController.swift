@@ -91,12 +91,15 @@ class RootViewController: NSViewController {
     @IBOutlet var emptyTransactionImageView: NSImageView!
     
     public override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {
-        self.accountController = AccountManager()
+
+        let accountInfo = AccountInfo()
+        self.accountController = AccountManager(accountInfo: accountInfo)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
     required init?(coder: NSCoder) {
-        self.accountController = AccountManager()
+        let accountInfo = AccountInfo()
+        self.accountController = AccountManager(accountInfo: accountInfo)
         super.init(coder: coder)
     }
 
@@ -220,7 +223,7 @@ extension RootViewController {
     @objc func changeAccount() {
         let index = accountSelector.indexOfSelectedItem
         let selectedAccount = accounts[index]
-        AccountInfo.updateAccountId(with: selectedAccount.id)
+        accountController.updateAccountId(with: selectedAccount.id)
         DispatchQueue.main.async {
             self.onRefresh(self)
         }

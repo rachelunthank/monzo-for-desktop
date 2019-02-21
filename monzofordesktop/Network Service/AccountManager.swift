@@ -10,15 +10,15 @@ import Foundation
 
 public class AccountManager {
 
-    private var accessToken: String {
-        return AccountInfo.accessToken
-    }
-
-    public var accountId: String {
-        return AccountInfo.accountId
-    }
+    private var accessToken: String
+    private var accountId: String
 
     private let apiUrlString = "https://api.monzo.com/"
+
+    init(accountInfo: AccountInfo) {
+        self.accountId = accountInfo.accountId
+        self.accessToken = accountInfo.accessToken
+    }
 
     public func getAccountBalance(completion: @escaping ((_ balance: Balance)->Void)) {
         let balanceUrlString = apiUrlString + "balance"
@@ -69,6 +69,10 @@ public class AccountManager {
             guard let accounts = try? JSONDecoder().decode(Accounts.self, from: data) else { return }
             completion(accounts)
             }.resume()
+    }
+
+    public func updateAccountId(with id: String) {
+        self.accountId = id
     }
 }
 
