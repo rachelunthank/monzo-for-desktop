@@ -11,6 +11,8 @@ import Cocoa
 class CollectionViewHeaderView: NSView {
 
     @IBOutlet var headerLabel: NSTextField!
-    
-    
+
+    override func prepareForReuse() {
+        headerLabel.stringValue = ""
+    }
 }
