@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "744F9C4A218DD16F00CBE4A4"
+               BuildableName = "monzofordesktopTests.xctest"
+               BlueprintName = "monzofordesktopTests"
+               ReferencedContainer = "container:monzofordesktop.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "744F9C55218DD16F00CBE4A4"
+               BuildableName = "monzofordesktopUITests.xctest"
+               BlueprintName = "monzofordesktopUITests"
+               ReferencedContainer = "container:monzofordesktop.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
